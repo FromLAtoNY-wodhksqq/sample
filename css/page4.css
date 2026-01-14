@@ -21,3 +21,86 @@
     margin: 8px 0;
     font-weight: 500;
 }
+.contact {
+    text-align: center;
+    padding: 50px 40px;
+}
+
+/* 헤더 */
+.contact-header h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* 이메일 */
+.contact-email {
+    margin: 40px 0;
+}
+
+.contact-email span {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.contact-email a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+}
+
+.contact-email a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #4a6cf7;
+}
+
+/* SNS 링크 */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+
+/* 아이콘 버튼 */
+.contact-links a {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s;
+}
+
+.contact-links a:hover {
+    transform: translateY(-6px);
+    background: rgba(74,108,247,0.25);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* 아이콘 크기 */
+.contact-links img {
+    width: 22px;
+    height: 22px;
+}

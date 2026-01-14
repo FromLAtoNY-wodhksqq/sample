@@ -16,45 +16,72 @@
     <!-- index 전용 스크립트 -->
     <script defer src="js/index.js"></script>
 </head>
+
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="page1.html" >수강과목</a></li>
+            <li><a href="page2.html">2026목표</a></li>
+            <li><a href="page3.html">취미</a></li>
+            <li><a href="page4.html">연락처</a></li>
+        </ul>
+    </nav>
 
-<header>
-    <h1>자기소개 웹페이지</h1>
-    <p>HTML · CSS · JavaScript 기반 과제</p>
-</header>
+<main class="hero-slider">
 
-<nav>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="page1.html">수강과목</a></li>
-        <li><a href="page2.html">2026목표</a></li>
-        <li><a href="page3.html">취미</a></li>
-        <li><a href="page4.html">연락처</a></li>
-    </ul>
-</nav>
+    <div class="slides">
 
-<main>
-    <section class="card fade-in">
-        <h2>자기소개</h2>
-        <p>
-            안녕하세요. 전북대학교 컴퓨터인공지능학부 최재완입니다.  
-            본 웹페이지는 웹 프로그래밍 과제로 제작되었으며  
-            구조적인 HTML 설계와 세련된 UI,  
-            JavaScript 기반 인터랙션을 구현했습니다.
-        </p>
+        <section class="slide active" style="background-image: url('images/header-bg.jpg')">
+            <div class="slide-content">
+                <h2>자기소개</h2>
+                <p>전북대학교 컴퓨터인공지능학부 최재완</p>
+                <a href="index.html" class="slide-btn">About Me</a>
+            </div>
+        </section>
 
-        <div class="button-group">
-            <a href="page1.html" class="btn">수강과목</a>
-            <a href="page2.html" class="btn">2026 목표</a>
-            <a href="page3.html" class="btn">취미</a>
-            <a href="page4.html" class="btn">연락처</a>
-        </div>
-    </section>
+        <section class="slide" style="background-image: url('images/subjects.jpg')">
+            <div class="slide-content">
+                <h2>수강과목</h2>
+                <p>학기별 전공 및 교양 과목 정리</p>
+                <a href="page1.html" class="slide-btn">View Courses</a>
+            </div>
+        </section>
+
+        <section class="slide" style="background-image: url('images/goals.jpg')">
+            <div class="slide-content">
+                <h2>2026 목표</h2>
+                <p>계획과 성장을 기록하다</p>
+                <a href="page2.html" class="slide-btn">My Goals</a>
+            </div>
+        </section>
+
+        <section class="slide" style="background-image: url('images/hobby.jpg')">
+            <div class="slide-content">
+                <h2>취미</h2>
+                <p>영화로 보는 나의 취향</p>
+                <a href="page3.html" class="slide-btn">My Movies</a>
+            </div>
+        </section>
+
+        <section class="slide" style="background-image: url('images/contact.jpg')">
+            <div class="slide-content">
+                <h2>Contact</h2>
+                <p>언제든 편하게 연락 주세요</p>
+                <a href="page4.html" class="slide-btn">Contact Me</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 좌/우 버튼 -->
+    <button id="prev" class="nav-btn">‹</button>
+    <button id="next" class="nav-btn">›</button>
+
+    <!-- 하단 점 -->
+    <div class="slider-dots"></div>
+
 </main>
-
-<footer>
-    © 2026 Choi Jaewan · Web Programming Assignment
-</footer>
 
 </body>
 </html>

@@ -1,8 +1,8 @@
-const links = document.querySelectorAll("nav a");
-const current = location.pathname.split("/").pop();
+const currentPage = location.pathname.split("/").pop();
 
+const links = document.querySelectorAll("nav a");
 links.forEach(link => {
-    if (link.getAttribute("href") === current) {
+    if (link.getAttribute("href") === currentPage) {
         link.classList.add("active");
     }
 });
