@@ -1,0 +1,20 @@
+/* 목표 페이지 전용 */
+
+.page-goals header {
+    background-image: url("../images/goals.jpg");
+}
+
+/* 카드 중앙 강조 */
+.page-goals .card {
+    text-align: center;
+}
+
+/* 목표 박스 */
+.goal-box {
+    margin-top: 25px;
+    padding: 18px;
+    background: #f5f7ff;
+    border-radius: 12px;
+    font-weight: 500;
+    box-shadow: inset 0 0 0 1px #dde3ff;
+}

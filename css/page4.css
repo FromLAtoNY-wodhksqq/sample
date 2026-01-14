@@ -1,0 +1,23 @@
+/* 연락처 페이지 전용 */
+
+.page-contact header {
+    background-image: url("../images/contact.jpg");
+}
+
+/* 카드 정렬 */
+.page-contact .card {
+    text-align: center;
+}
+
+/* 연락처 박스 */
+.contact-box {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px dashed #4a6cf7;
+    border-radius: 12px;
+}
+
+.contact-box p {
+    margin: 8px 0;
+    font-weight: 500;
+}

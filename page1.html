@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>수강과목</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- index 전용 스타일 -->
+    <link rel="stylesheet" href="css/page1.css">
+
+    <!-- 공통 스크립트 -->
+    <script defer src="js/script.js"></script>
+
+    <!-- index 전용 스크립트 -->
+    <script defer src="js/page1.js"></script>
 </head>
-<body>
+<body class="page-subjects">
+
 
 <header>
     <h1>수강과목</h1>
-    <p>개인 소개</p>
+    <p>[1-1, 1-2, 2-1, 2-2]</p>
 </header>
 
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html" class="active">수강과목</a></li>
         <li><a href="page2.html">2026목표</a></li>
         <li><a href="page3.html">취미</a></li>
         <li><a href="page4.html">연락처</a></li>
@@ -23,13 +34,42 @@
 </nav>
 
 <main>
-    <div class="card">
-        <h2>내용</h2>
-        <p>
-            이 페이지에는 본인의 전공, 관심 분야, 학습 목표 등을 작성하면 됩니다.
-        </p>
-    </div>
+    <section class="card">
+        <h2>수강과목</h2>
+        <p class="sub-text">현재까지 수강한 전공 및 교양 과목입니다.</p>
+
+        <div class="subject-grid">
+            <div class="subject-item">초급프로젝트</div>
+            <div class="subject-item">알고리즘</div>
+            <div class="subject-item">객체지향프로그래밍</div>
+            <div class="subject-item">컴퓨터구조</div>
+            <div class="subject-item">리눅스프로그래밍</div>
+            <div class="subject-item">데이터통신</div>
+
+            <div class="subject-item">자료구조</div>
+            <div class="subject-item">논리설계</div>
+            <div class="subject-item">선형대수학</div>
+            <div class="subject-item">컴퓨터공학총론</div>
+            <div class="subject-item">이산수학</div>
+            <div class="subject-item">c++프로그래밍</div>
+
+            <div class="subject-item">컴퓨터과학과코딩</div>
+            <div class="subject-item">경제학의이해</div>
+            <div class="subject-item">영화의이해</div>
+            <div class="subject-item">수학1</div>
+            <div class="subject-item">수학2</div>
+            <div class="subject-item">통계적사고와사회</div>
+
+            <div class="subject-item">글쓰기</div>
+            <div class="subject-item">일반물리학</div>
+            <div class="subject-item">고전명저읽기</div>
+            <div class="subject-item">실용영어</div>
+            <div class="subject-item">초급물리학</div>
+            <div class="subject-item">c언어기초</div>
+        </div>
+    </section>
 </main>
+
 
 <footer>
     © 2026 Your Name

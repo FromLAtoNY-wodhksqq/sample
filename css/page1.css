@@ -1,0 +1,76 @@
+/* 수강과목 페이지 전용 */
+
+.page-subjects header {
+    background-image: url("../images/subjects.jpg");
+}
+
+/* 카드 강조 */
+.page-subjects .card {
+    border-left: 6px solid #4a6cf7;
+}
+
+/* 리스트 스타일 */
+.subject-list {
+    margin-top: 20px;
+}
+
+.subject-list li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #4a6cf7;
+    color: #333;
+}
+/* 수강과목 제목 보조 텍스트 */
+.sub-text {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Finder 스타일 Grid */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6열 */
+    gap: 18px;
+}
+
+/* 과목 카드 */
+.subject-item {
+    height: 90px;
+    background: linear-gradient(145deg, #ffffff, #f1f4ff);
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+
+    box-shadow:
+        0 6px 12px rgba(0,0,0,0.06),
+        inset 0 0 0 1px #e5e9ff;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+/* Finder-like hover */
+.subject-item:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow:
+        0 16px 30px rgba(74,108,247,0.25),
+        inset 0 0 0 1px #4a6cf7;
+}
+
+@media (max-width: 1200px) {
+    .subject-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

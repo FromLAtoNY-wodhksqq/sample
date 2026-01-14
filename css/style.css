@@ -1,0 +1,164 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #f5f7fa, #e4ecf5);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: relative;
+    height: 320px;              /* 박스 크기 증가 */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    /* 배경 이미지 */
+    background-image: url("../images/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* 이미지 위에 어두운 오버레이 */
+    overflow: hidden;
+}
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    );
+    z-index: 1;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 2.8rem;   /* 제목 강조 */
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* Navigation */
+nav {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 5;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4a6cf7;
+    transition: width 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    max-width: 720px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 8px 10px 0 0;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: #4a6cf7;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(74,108,247,0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}

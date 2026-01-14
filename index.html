@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>자기소개 페이지</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- index 전용 스타일 -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- 공통 스크립트 -->
+    <script defer src="js/script.js"></script>
+
+    <!-- index 전용 스크립트 -->
+    <script defer src="js/index.js"></script>
 </head>
 <body>
 
@@ -15,7 +25,7 @@
 
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="page1.html">수강과목</a></li>
         <li><a href="page2.html">2026목표</a></li>
         <li><a href="page3.html">취미</a></li>
@@ -24,19 +34,26 @@
 </nav>
 
 <main>
-    <div class="card">
+    <section class="card fade-in">
         <h2>자기소개</h2>
         <p>
-            안녕하세요. 본 웹페이지는 웹 프로그래밍 과제로 제작되었으며,
-            HTML의 구조적 설계, CSS를 활용한 UI 디자인,
-            JavaScript를 이용한 간단한 인터랙션을 포함하고 있습니다.
+            안녕하세요. 전북대학교 컴퓨터인공지능학부 최재완입니다.  
+            본 웹페이지는 웹 프로그래밍 과제로 제작되었으며  
+            구조적인 HTML 설계와 세련된 UI,  
+            JavaScript 기반 인터랙션을 구현했습니다.
         </p>
-        <a href="page1.html" class="btn">자세히 보기</a>
-    </div>
+
+        <div class="button-group">
+            <a href="page1.html" class="btn">수강과목</a>
+            <a href="page2.html" class="btn">2026 목표</a>
+            <a href="page3.html" class="btn">취미</a>
+            <a href="page4.html" class="btn">연락처</a>
+        </div>
+    </section>
 </main>
 
 <footer>
-    © 2026 Your Name · Web Programming Assignment
+    © 2026 Choi Jaewan · Web Programming Assignment
 </footer>
 
 </body>
