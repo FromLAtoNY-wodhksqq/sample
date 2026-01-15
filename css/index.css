@@ -1,48 +1,88 @@
+/* ===============================
+   Reset & Base
+================================ */
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    background: #fff;
+    color: #222;
 }
 
-
-/* nav */
+/* ===============================
+   Navigation
+================================ */
 nav {
     height: 60px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    z-index: 20;
+    z-index: 50;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #fff;
+}
+
+/* ===============================
+   Hero Slider Layout
+================================ */
 .hero-slider {
     position: relative;
     height: calc(100vh - 60px);
-    width: 100%;
     overflow: hidden;
 }
 
+.hero-wrapper {
+    display: flex;
+    height: 100%;
+}
 
-/* 슬라이드 컨테이너 */
+/* ===============================
+   Slides
+================================ */
 .slides {
     position: relative;
-    width: 100%;
+    flex: 1;
     height: 100%;
+    overflow: hidden;
 }
 
 .slide {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity .8s ease;
 }
 
 .slide.active {
     opacity: 1;
 }
-
 
 /* 어두운 오버레이 */
 .slide::before {
@@ -50,10 +90,9 @@ nav {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.45);
-    pointer-events: none;
 }
 
-/* 텍스트 */
+/* 슬라이드 텍스트 */
 .slide-content {
     position: relative;
     z-index: 5;
@@ -63,65 +102,69 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #fff;
     padding: 20px;
 }
 
 .slide-content h2 {
     font-size: 3rem;
-    margin-bottom: 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
 }
 
 .slide-content p {
-    font-size: 1.1rem;
-    margin-bottom: 32px;
+    font-size: 1.15rem;
     color: #ddd;
 }
 
-/* 슬라이드 버튼 */
-.slide-btn {
-    padding: 14px 32px;
-    border-radius: 999px;
-    background: #4a6cf7;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform .25s, box-shadow .25s;
-}
-
-.slide-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(74,108,247,0.4);
-}
-
-/* 좌 / 우 버튼 */
+/* ===============================
+   Slide Navigation Buttons
+================================ */
+/* ===============================
+   Slide Navigation Buttons (Updated)
+================================ */
 .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: none;
-    font-size: 2rem;
-    background: rgba(255,255,255,0.25);
-    color: white;
+    font-size: 2.2rem;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
     cursor: pointer;
-    z-index: 10;
+    z-index: 20;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.35);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
 }
 
 #prev { left: 30px; }
 #next { right: 30px; }
 
-/* 하단 dots (사진 위에 정확히 표시) */
+
+/* ===============================
+   Slide Dots
+================================ */
 .slider-dots {
     position: absolute;
-    bottom: 40px;
+    bottom: 36px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
-    z-index: 10; /* slide-content 아래, 오버레이 위 */
+    z-index: 20;
 }
 
 .slider-dots span {
@@ -130,13 +173,52 @@ nav {
     border-radius: 50%;
     background: rgba(255,255,255,0.5);
     cursor: pointer;
+    transition: background .2s;
 }
 
 .slider-dots span.active {
-    background: white;
+    background: #fff;
 }
 
-/* ===== About Me Section ===== */
+/* ===============================
+   About Panel (Right Side)
+================================ */
+.about-panel {
+    width: 380px;
+    background: #fff;
+    padding: 70px 45px;
+    box-shadow: -20px 0 40px rgba(0,0,0,0.12);
+    z-index: 10;
+}
+
+.about-panel h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.about-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-panel li {
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+    color: #333;
+}
+
+.about-panel strong {
+    display: inline-block;
+    width: 90px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* ===============================
+   About Section (Below Slider)
+================================ */
 .about-section {
     background: #f7f8fc;
     padding: 120px 20px;
@@ -149,21 +231,20 @@ nav {
 }
 
 .about-title {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
+    font-size: 2.6rem;
     font-weight: 700;
-    color: #222;
+    margin-bottom: 60px;
 }
 
-/* 카드 형태 */
+/* 카드 */
 .about-card {
-    background: white;
-    border-radius: 20px;
-    padding: 50px 40px;
+    background: #fff;
+    border-radius: 22px;
+    padding: 50px 45px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* 정보 한 줄 */
+/* 한 줄 정보 */
 .about-row {
     display: grid;
     grid-template-columns: 120px 1fr;
@@ -171,35 +252,38 @@ nav {
     border-bottom: 1px solid #eee;
 }
 
-
 .about-row:last-child {
     border-bottom: none;
 }
 
 .about-row .label {
     font-weight: 600;
-    color: #555;
-    font-size: 1.05rem;
+    color: #666;
 }
 
 .about-row .value {
-    font-size: 1.05rem;
     color: #111;
 }
-
-/* 학력 한 줄 전체 사용 */
-.about-row.full {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+/* ===============================
+   Slide Buttons
+================================ */
+.slide-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 36px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #4a6cf7, #00c6ff);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-.about-row.full .label {
-    color: #777;
-    font-size: 0.95rem;
+.slide-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(135deg, #3a54d7, #00b4e0);
 }
 
-.about-row.full .value {
-    font-size: 1.1rem;
-    font-weight: 500;
-}

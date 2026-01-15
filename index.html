@@ -6,41 +6,44 @@
 
     <!-- 공통 스타일 -->
     <link rel="stylesheet" href="css/style.css">
-
     <!-- index 전용 스타일 -->
     <link rel="stylesheet" href="css/index.css">
 
-    <!-- 공통 스크립트 -->
+    <!-- 스크립트 -->
     <script defer src="js/script.js"></script>
-
-    <!-- index 전용 스크립트 -->
     <script defer src="js/index.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="page1.html" >수강과목</a></li>
-            <li><a href="page2.html">2026목표</a></li>
-            <li><a href="page3.html">취미</a></li>
-            <li><a href="page4.html">연락처</a></li>
-        </ul>
-    </nav>
 
+<!-- ===== 네비게이션 ===== -->
+<nav>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="page1.html">수강과목</a></li>
+        <li><a href="page2.html">2026목표</a></li>
+        <li><a href="page3.html">취미</a></li>
+        <li><a href="page4.html">연락처</a></li>
+    </ul>
+</nav>
+
+<!-- ===== 메인 슬라이더 ===== -->
 <main class="hero-slider">
 
+    <!-- 슬라이드 묶음 -->
     <div class="slides">
 
-        <section class="slide active" style="background-image: url('images/header-bg.jpg')">
+        <!-- Slide 1 -->
+        <section class="slide active" style="background-image:url('images/header-bg.jpg')">
             <div class="slide-content">
                 <h2>자기소개</h2>
                 <p>전북대학교 컴퓨터인공지능학부 최재완</p>
-                <a href="index.html" class="slide-btn">About Me</a>
+                <a href="#about" class="slide-btn">About Me</a>
             </div>
         </section>
 
-        <section class="slide" style="background-image: url('images/subjects.jpg')">
+        <!-- Slide 2 -->
+        <section class="slide" style="background-image:url('images/subjects.jpg')">
             <div class="slide-content">
                 <h2>수강과목</h2>
                 <p>학기별 전공 및 교양 과목 정리</p>
@@ -48,43 +51,46 @@
             </div>
         </section>
 
-        <section class="slide" style="background-image: url('images/goals.jpg')">
+        <!-- Slide 3 -->
+        <section class="slide" style="background-image:url('images/goals.jpg')">
             <div class="slide-content">
                 <h2>2026 목표</h2>
                 <p>계획과 성장을 기록하다</p>
-                <a href="page2.html" class="slide-btn">My Goals</a>
+                <a href="page2.html" class="slide-btn">My Goal</a>
             </div>
         </section>
 
-        <section class="slide" style="background-image: url('images/hobby.jpg')">
+        <!-- Slide 4 -->
+        <section class="slide" style="background-image:url('images/hobby.jpg')">
             <div class="slide-content">
                 <h2>취미</h2>
                 <p>영화로 보는 나의 취향</p>
-                <a href="page3.html" class="slide-btn">My Movies</a>
+                <a href="page3.html" class="slide-btn">My Hobby</a>
             </div>
         </section>
 
-        <section class="slide" style="background-image: url('images/contact.jpg')">
+        <!-- Slide 5 -->
+        <section class="slide" style="background-image:url('images/contact.jpg')">
             <div class="slide-content">
                 <h2>Contact</h2>
-                <p>언제든 편하게 연락 주세요</p>
+                <p>언제든지 편하게 연락 주세요</p>
                 <a href="page4.html" class="slide-btn">Contact Me</a>
             </div>
         </section>
 
     </div>
 
-    <!-- 좌/우 버튼 -->
+    <!-- 슬라이드 네비 버튼 -->
     <button id="prev" class="nav-btn">‹</button>
     <button id="next" class="nav-btn">›</button>
 
-    <!-- 하단 점 -->
+    <!-- 하단 dots -->
     <div class="slider-dots"></div>
 
-
-
 </main>
-    <section class="about-section">
+
+<!-- ===== About Section ===== -->
+<section id="about" class="about-section">
     <div class="about-container">
         <h2 class="about-title">About Me</h2>
 
@@ -93,18 +99,17 @@
                 <span class="label">이름</span>
                 <span class="value">최재완</span>
             </div>
-
             <div class="about-row">
                 <span class="label">생년월일</span>
                 <span class="value">2001.04.13</span>
             </div>
-
-            <div class="about-row ">
+            <div class="about-row">
                 <span class="label">학력</span>
                 <span class="value">중앙고등학교 졸업 (2020.02)</span>
             </div>
         </div>
     </div>
 </section>
+
 </body>
 </html>
