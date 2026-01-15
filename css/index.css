@@ -1,10 +1,9 @@
-/* ===== 기본 리셋 ===== */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
+    width: 100%;
 }
+
 
 /* nav */
 nav {
@@ -13,13 +12,13 @@ nav {
     z-index: 20;
 }
 
-/* ===== 슬라이더 영역 ===== */
 .hero-slider {
     position: relative;
-    height: calc(100vh - 60px); /* nav 제외 */
-    width: 100%;                /* ← 중요: 100vw 사용 금지 */
+    height: calc(100vh - 60px);
+    width: 100%;
     overflow: hidden;
 }
+
 
 /* 슬라이드 컨테이너 */
 .slides {
@@ -28,10 +27,12 @@ nav {
     height: 100%;
 }
 
-/* 개별 슬라이드 */
 .slide {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     opacity: 0;
@@ -41,6 +42,7 @@ nav {
 .slide.active {
     opacity: 1;
 }
+
 
 /* 어두운 오버레이 */
 .slide::before {
@@ -132,4 +134,72 @@ nav {
 
 .slider-dots span.active {
     background: white;
+}
+
+/* ===== About Me Section ===== */
+.about-section {
+    background: #f7f8fc;
+    padding: 120px 20px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* 카드 형태 */
+.about-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* 정보 한 줄 */
+.about-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+
+.about-row:last-child {
+    border-bottom: none;
+}
+
+.about-row .label {
+    font-weight: 600;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.about-row .value {
+    font-size: 1.05rem;
+    color: #111;
+}
+
+/* 학력 한 줄 전체 사용 */
+.about-row.full {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.about-row.full .label {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.about-row.full .value {
+    font-size: 1.1rem;
+    font-weight: 500;
 }
